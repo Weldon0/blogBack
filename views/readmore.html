@@ -1,0 +1,181 @@
+{{include "same/header"}}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <div class="col-md-11">
+        <!-- Box Comment -->
+        <div class="box box-widget">
+            <div class="box-header with-border">
+                <div class="user-block">
+                    <span class="username"><a href="#">{{data.title}}</a></span>
+                    <span class="description">Shared publicly - {{data.date}}</span>
+                </div>
+                <!-- /.user-block -->
+                <div class="box-tools">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <!-- post text -->
+                <p class="text-muted" style="padding: 2rem">
+                  &nbsp;&nbsp;&nbsp;{{data.content}}
+                </p>
+                <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> 分享</button>
+                <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> 赞</button>
+                <span class="pull-right text-muted">45 likes - 2 comments</span>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer box-comments">
+                <div class="box-comment">
+                    <!-- User image -->
+
+                    <div class="comment-text">
+                      <span class="username">
+                        将
+                        <span class="text-muted pull-right">8:03 PM Today</span>
+                      </span>
+                        <span class="text-muted">加上他们“捣毁机关，阻断交通，殴伤中委，
+                    拦劫汽车，横击路人及公务人员，私逮刑讯，社会秩序，赞一个！</span>
+                    </div>
+                    <!-- /.comment-text -->
+                </div>
+                <!-- /.box-comment -->
+                <div class="box-comment">
+
+                    <div class="comment-text">
+                      <span class="username">
+                        王彬
+                        <span class="text-muted pull-right">8:03 PM Today</span>
+                      </span><!-- /.username -->
+                        <span class="text-muted">可以可以，写得好，我很欣赏</span>
+                    </div>
+                    <!-- /.comment-text -->
+                </div>
+                <!-- /.box-comment -->
+            </div>
+            <!-- /.box-footer -->
+            <div class="box-footer">
+                <form action="#" method="post">
+                    <div class="img-push">
+                        <input type="text" class="form-control input-sm" placeholder="我要评论">
+                    </div>
+                </form>
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+{{include "same/footer"}}
+
+<script>
+  $('.addAdmin').click(function() 
+  {
+    location.href = 'addAdmin';
+  });
+  $('.userMessage').click(function() 
+  {
+    console.log(this.dataset.name)
+  });
+  
+  
+</script>
+</body>
+</html>

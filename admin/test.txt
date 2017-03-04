@@ -1,0 +1,1 @@
+{"name":"test","email":"374620777@qq.com","password":"123","confirmPassowrd":"123","phone":"18351892193","qq":"374620777","like":"打篮球，学习前端","signature":"","height":"175","weight":"60","work":"前端工程师","date":"2017-3-2   15:12:9"}

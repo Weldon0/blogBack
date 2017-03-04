@@ -1,0 +1,19 @@
+{
+  "name": "blogback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Weldon0/blogBack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Weldon0/blogBack/issues"
+  },
+  "homepage": "https://github.com/Weldon0/blogBack#readme"
+}

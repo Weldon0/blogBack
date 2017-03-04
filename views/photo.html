@@ -1,0 +1,184 @@
+{{include "same/header"}}
+  <div class="content-wrapper" style="padding-top: 5rem">
+   		<div class="container" style="display: flex; justify-content: space-around;align-items: center;">
+            <!--enctype 属性规定在发送到服务器之前应该如何对表单数据进行编码。-->
+            <form action="/user/photo" enctype="multipart/form-data">
+
+
+               <div class="form-group">
+                   <input  id="imgS" type="file" name="photo" required accept=".jpg,.png">
+               </div>
+               <input type="submit" class="btn btn-success form-control" value="上传头像">
+
+            </form>
+             <img class="imgInput" style="width: 200px; margin: 0px auto" src="http://img01.taopic.com/141128/240418-14112P9345826.jpg" alt="">
+             
+        </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+
+
+<div id="messageModal" class="modal modal-info fade"  role = "dialog" tabIndex="-1" aria-labelledby = 'myMadallabel'>
+  <div class="modal-dialog" role = 'document'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label = 'Close' data-dismiss = 'modal'>
+          &times;
+        </button>
+        <h4>博客后台提示</h4>
+      </div>
+      <div class="modal-body">
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{include "same/footer"}}
+
+<script>
+	$('#imgS').change(function(event)
+    {
+    	console.log('change')
+        var input = event.originalEvent.target;
+        var file = input.files[0];
+        if (file.type.startsWith('image'))
+        {
+            var imgSrc = URL.createObjectURL(file); //把获取到的文件获取他的路径
+            $('.imgInput').attr('src',imgSrc);
+        }
+        else
+        {
+            alert('请选择一张图片');
+        }
+    })
+    $('form').submit(function(ev)
+    {
+	    ev.preventDefault()
+	    var data = new FormData(this);
+	    console.log(data)
+	    $.ajax({
+	        url:'/user/addphoto',
+	        data:data,
+
+	        contentType:false, //默认application/x-www-form-urlencoded 如果极个别情况下 需要使用multipart/form-data时需要修改这个值
+	        cache:false, //是否允许使用缓存数据
+	        processData:false,
+	        type:'POST',
+	        success:function(res){
+	            if(res.code == 'success')
+              {
+	                
+	               $('#messageModal .modal-body p').text(res.message)
+                  $('#messageModal').modal('show').on('hidden.bs.modal', function() 
+                  {
+                      if (res.code == 'success')
+                      {
+                          location.href = '/user/home';
+                      }
+                  })
+	            }
+	            else
+              {
+	                 $('#messageModal .modal-body p').text('上传错误');
+                   $('#messageModal').modal('show').on('hidden.bs.modal');
+	            }
+	        }
+
+    })
+})
+  
+	
+</script>
+</body>
+</html>

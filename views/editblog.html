@@ -1,0 +1,236 @@
+{{include "same/header"}}
+  <div class="content-wrapper">
+   		 <section class="content-header">
+        <h1>
+            博客小屋
+            <small>{{signature}}</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3">
+                <a  class="btn btn-primary btn-block margin-bottom">个人资料</a>
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">基本资料</h3>
+
+                        <div class="box-tools">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box-body no-padding">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="mailbox.html"><i class="glyphicon glyphicon-user"></i> 姓名：
+                                <span class="label label-primary ">{{name}}</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> 联系电话：
+                                <span>{{phone}}</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> 职业：
+                                <span">{{work}}</span></a>
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i>邮箱：
+                                <span class="">{{email}}</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-globe"></i> QQ：
+                                <span">{{qq}}</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">其他</h3>
+
+                        <div class="box-tools">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box-body no-padding">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#"><i class="glyphicon glyphicon-heart"></i> 兴趣，爱好：
+                                <span>{{like}}</span></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> 身高：
+                                <span>{{height}}cm</span></a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-light-blue"></i> 体重：
+                                <span>{{weight}}kg</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="box box-primary">
+                    <form action="">
+                    	<div class="box-header with-border">
+                        <h3 class="box-title">写博客</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="文章名：" required name="title">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="标签：" name="tag">
+                        </div>
+                        <div class="form-group">
+                    		<textarea id="compose-textarea" required class="form-control" style="height: 300px" name="content"></textarea>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> 提交</button>
+                            <p class="help-block label-warning">日期：<span>2017.3.1 10:30</span></p>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+
+
+<div id="messageModal" class="modal modal-info fade"  role = "dialog" tabIndex="-1" aria-labelledby = 'myMadallabel'>
+  <div class="modal-dialog" role = 'document'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label = 'Close' data-dismiss = 'modal'>
+          &times;
+        </button>
+        <h4>博客后台提示</h4>
+      </div>
+      <div class="modal-body">
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{include "same/footer"}}
+
+<script>
+	$('.addAdmin').click(function() 
+	{
+		location.href = 'addAdmin';
+	});
+  $('.userMessage').click(function() 
+  {
+    console.log(this.dataset.name)
+  });
+  $('form').submit(function(event) 
+  {
+  	event.preventDefault();
+  	var formData = $(this).serializeArray()
+
+  	$.post('/user/editblog', formData, function(data, textStatus, xhr) 
+  	{
+  		$('#messageModal .modal-body p').text(data.message)
+            $('#messageModal').modal('show').on('hidden.bs.modal', function() 
+            {
+                if (data.code == 'success')
+                {
+                   location.href='/user/watchblog';
+                }
+            })
+  	});
+
+  });
+  
+	
+</script>
+</body>
+</html>

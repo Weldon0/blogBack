@@ -1,0 +1,1 @@
+{"name":"wuxiaohui","email":"374620777@qq.com","password":"123","confirmPassowrd":"123","phone":"18351892193","qq":"374620777","like":"打球，学习前端","signature":"博客","height":"175","weight":"60","work":"前端","date":"2017-3-2   14:12:58"}

@@ -1,0 +1,204 @@
+{{include "same/header"}}
+  <div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            博客小屋
+            <small>安能辨我是雄雌</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3">
+                <a  class="btn btn-primary btn-block margin-bottom">个人资料</a>
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">基本资料</h3>
+
+                        <div class="box-tools">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box-body no-padding">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="mailbox.html"><i class="glyphicon glyphicon-user"></i> 姓名：
+                                <span class="label label-primary ">{{name}}</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-earphone"></i> 联系电话：
+                                <span{{phone}}</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> 职业：
+                                <span">{{work}}</span></a>
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i>邮箱：
+                                <span class="">{{email}}</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-globe"></i> QQ：
+                                <span">{{qq}}</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">其他</h3>
+
+                        <div class="box-tools">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box-body no-padding">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#"><i class="glyphicon glyphicon-heart"></i> 兴趣，爱好：
+                                <span>{{like}}</span></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> 身高：
+                                <span>{{height}}cm</span></a></li>
+                            <li><a href="#"><i class="fa fa-circle-o text-light-blue"></i> 体重：
+                                <span>{{weight}}kg</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <section class="content-header">
+                    <h1>
+                        文章列表
+                        <small>展示：</small>
+                    </h1>
+                </section>
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="timeline">
+                                <li class="time-label">
+                                  <span class="bg-red">
+                                    2017 3.1
+                                  </span>
+                                </li>
+                                {{each data as i}}
+                                <li>
+                                    <i class="fa fa-envelope bg-blue"></i>
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> {{i.date}}</span>
+
+                                        <h3 class="timeline-header"><a href="#">{{i.title}}</a></h3>
+
+                                        <div class="timeline-body">
+                                            {{i.content}}
+                                        </div>
+                                        <div class="timeline-footer">
+                                            <a class="btn btn-primary btn-xs readMore" data-name={{name}} data-title={{i.title}}>阅读全部</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</div>
+
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+{{include "same/footer"}}
+
+<script>
+  $('.readMore').click(function() 
+  {
+    location.href = '/user/blog/' + this.dataset.name + '/' + this.dataset.title;
+  });
+</script>
+</body>
+</html>
