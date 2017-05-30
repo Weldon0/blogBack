@@ -24,5 +24,8 @@
 	*	router:存储路由文件
 	*	views:视图文件
 	*	server.js 入口文件
-
-*	
+	
+*	运行:
+	*	项目目录下，命令行运行<code>npm server</code>
+	*	浏览器输入localhost:3000
+	*	用户名:admin 密码:123  直接登录
